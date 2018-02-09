@@ -8,5 +8,3 @@ C:\Users\kille\Documents\GitHub\cpu-core-controller\ControlMyCores\obj\Release\C
 C:\Users\kille\Documents\GitHub\cpu-core-controller\ControlMyCores\obj\Release\ControlMyCores.exe
 C:\Users\kille\Documents\GitHub\cpu-core-controller\ControlMyCores\obj\Release\ControlMyCores.xml
 C:\Users\kille\Documents\GitHub\cpu-core-controller\ControlMyCores\obj\Release\ControlMyCores.pdb
-C:\Users\kille\Documents\GitHub\cpu-core-controller\ControlMyCores\obj\Release\ControlMyCores.TrustInfo.xml
-C:\Users\kille\Documents\GitHub\cpu-core-controller\ControlMyCores\obj\Release\ControlMyCores.exe.manifest
