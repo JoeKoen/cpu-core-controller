@@ -194,6 +194,7 @@ Partial Class Form1
         Me.pclist.Location = New System.Drawing.Point(3, 16)
         Me.pclist.Name = "pclist"
         Me.pclist.Size = New System.Drawing.Size(310, 288)
+        Me.pclist.Sorted = True
         Me.pclist.TabIndex = 0
         '
         'rfspcl
