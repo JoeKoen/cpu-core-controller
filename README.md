@@ -9,3 +9,7 @@ In most cases; it's a FPS booster.
 
 Right now it's bare bones, but works as intended.
 More features to come.
+
+You can get the file here: https://github.com/JoeKoen/cpu-core-controller/releases
+
+Demo: https://youtu.be/SLj__ZTA0t8
