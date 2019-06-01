@@ -8,3 +8,13 @@ C:\Users\kille\Documents\GitHub\cpu-core-controller\ControlMyCores\obj\Release\C
 C:\Users\kille\Documents\GitHub\cpu-core-controller\ControlMyCores\obj\Release\ControlMyCores.exe
 C:\Users\kille\Documents\GitHub\cpu-core-controller\ControlMyCores\obj\Release\ControlMyCores.xml
 C:\Users\kille\Documents\GitHub\cpu-core-controller\ControlMyCores\obj\Release\ControlMyCores.pdb
+Z:\OneDrive\Main_PC\GitHub\cpu-core-controller\ControlMyCores\bin\Release\ControlMyCores.exe.config
+Z:\OneDrive\Main_PC\GitHub\cpu-core-controller\ControlMyCores\obj\Release\ControlMyCores.exe
+Z:\OneDrive\Main_PC\GitHub\cpu-core-controller\ControlMyCores\obj\Release\ControlMyCores.xml
+Z:\OneDrive\Main_PC\GitHub\cpu-core-controller\ControlMyCores\obj\Release\ControlMyCores.pdb
+Z:\OneDrive\Main_PC\GitHub\cpu-core-controller\ControlMyCores\bin\Release\ControlMyCores.exe
+Z:\OneDrive\Main_PC\GitHub\cpu-core-controller\ControlMyCores\bin\Release\ControlMyCores.pdb
+Z:\OneDrive\Main_PC\GitHub\cpu-core-controller\ControlMyCores\bin\Release\ControlMyCores.xml
+Z:\OneDrive\Main_PC\GitHub\cpu-core-controller\ControlMyCores\obj\Release\ControlMyCores.Form1.resources
+Z:\OneDrive\Main_PC\GitHub\cpu-core-controller\ControlMyCores\obj\Release\ControlMyCores.Resources.resources
+Z:\OneDrive\Main_PC\GitHub\cpu-core-controller\ControlMyCores\obj\Release\ControlMyCores.vbproj.GenerateResource.Cache

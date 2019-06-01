@@ -25,6 +25,7 @@ Partial Class Form1
         Me.fss = New System.Windows.Forms.TrackBar()
         Me.singlecoreval = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ReportLbl = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
@@ -36,9 +37,13 @@ Partial Class Form1
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.pclist = New System.Windows.Forms.CheckedListBox()
         Me.rfspcl = New System.Windows.Forms.Button()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.CoreBox2 = New System.Windows.Forms.GroupBox()
         Me.cs = New System.Windows.Forms.CheckedListBox()
         Me.fcp2 = New System.Windows.Forms.Button()
+        Me.ProcessChanger = New System.ComponentModel.BackgroundWorker()
+        Me.ProcessChanger2 = New System.ComponentModel.BackgroundWorker()
+        Me.ProcessChanger3 = New System.ComponentModel.BackgroundWorker()
+        Me.MCBW = New System.ComponentModel.BackgroundWorker()
         CType(Me.fss, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -46,7 +51,7 @@ Partial Class Form1
         Me.GroupBox2.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
+        Me.CoreBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'fss
@@ -72,6 +77,7 @@ Partial Class Form1
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.SkyBlue
+        Me.GroupBox1.Controls.Add(Me.ReportLbl)
         Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.fss)
@@ -83,6 +89,15 @@ Partial Class Form1
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Single Core Controller - Set all programs to use a single core"
+        '
+        'ReportLbl
+        '
+        Me.ReportLbl.AutoSize = True
+        Me.ReportLbl.Location = New System.Drawing.Point(84, 88)
+        Me.ReportLbl.Name = "ReportLbl"
+        Me.ReportLbl.Size = New System.Drawing.Size(84, 13)
+        Me.ReportLbl.TabIndex = 5
+        Me.ReportLbl.Text = "Doing Nothing..."
         '
         'Button2
         '
@@ -97,7 +112,7 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(6, 83)
+        Me.Button1.Location = New System.Drawing.Point(3, 83)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 3
@@ -164,7 +179,7 @@ Partial Class Form1
         'TabPage2
         '
         Me.TabPage2.Controls.Add(Me.GroupBox4)
-        Me.TabPage2.Controls.Add(Me.GroupBox3)
+        Me.TabPage2.Controls.Add(Me.CoreBox2)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -207,18 +222,18 @@ Partial Class Form1
         Me.rfspcl.Text = "Refresh Process List"
         Me.rfspcl.UseVisualStyleBackColor = True
         '
-        'GroupBox3
+        'CoreBox2
         '
-        Me.GroupBox3.BackColor = System.Drawing.Color.SkyBlue
-        Me.GroupBox3.Controls.Add(Me.cs)
-        Me.GroupBox3.Controls.Add(Me.fcp2)
-        Me.GroupBox3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.GroupBox3.Location = New System.Drawing.Point(3, 3)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(316, 115)
-        Me.GroupBox3.TabIndex = 1
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Select Cores to Use"
+        Me.CoreBox2.BackColor = System.Drawing.Color.SkyBlue
+        Me.CoreBox2.Controls.Add(Me.cs)
+        Me.CoreBox2.Controls.Add(Me.fcp2)
+        Me.CoreBox2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.CoreBox2.Location = New System.Drawing.Point(3, 3)
+        Me.CoreBox2.Name = "CoreBox2"
+        Me.CoreBox2.Size = New System.Drawing.Size(316, 115)
+        Me.CoreBox2.TabIndex = 1
+        Me.CoreBox2.TabStop = False
+        Me.CoreBox2.Text = "Select Cores to Use -Doing Nothing"
         '
         'cs
         '
@@ -241,6 +256,22 @@ Partial Class Form1
         Me.fcp2.Text = "Force Checked Processes"
         Me.fcp2.UseVisualStyleBackColor = True
         '
+        'ProcessChanger
+        '
+        Me.ProcessChanger.WorkerReportsProgress = True
+        '
+        'ProcessChanger2
+        '
+        Me.ProcessChanger2.WorkerReportsProgress = True
+        '
+        'ProcessChanger3
+        '
+        Me.ProcessChanger3.WorkerReportsProgress = True
+        '
+        'MCBW
+        '
+        Me.MCBW.WorkerReportsProgress = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -260,7 +291,7 @@ Partial Class Form1
         Me.GroupBox2.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
-        Me.GroupBox3.ResumeLayout(False)
+        Me.CoreBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -275,11 +306,16 @@ Partial Class Form1
     Friend WithEvents scpl As System.Windows.Forms.ListBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents rfpl1 As System.Windows.Forms.Button
-    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
+    Friend WithEvents CoreBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents cs As System.Windows.Forms.CheckedListBox
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
     Friend WithEvents pclist As System.Windows.Forms.CheckedListBox
     Friend WithEvents rfspcl As System.Windows.Forms.Button
     Friend WithEvents fcp2 As System.Windows.Forms.Button
+    Friend WithEvents ProcessChanger As System.ComponentModel.BackgroundWorker
+    Friend WithEvents ProcessChanger2 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents ProcessChanger3 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents ReportLbl As System.Windows.Forms.Label
+    Friend WithEvents MCBW As System.ComponentModel.BackgroundWorker
 
 End Class
